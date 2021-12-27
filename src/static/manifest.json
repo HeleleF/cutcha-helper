@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Cutcha Helper",
+  "version": "0.0.1",
+  "content_scripts": [
+    {
+      "matches": ["__CUTCHA_SITE__/*"],
+      "js": ["cc.content.js"],
+      "all_frames": true,
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["__FC_SITE__/*"],
+      "js": ["fc.content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
